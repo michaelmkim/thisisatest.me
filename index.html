@@ -5,10 +5,20 @@
     <title>our first HTML5 page</title>
     <meta name="description" content="Welcome to my basic template">
     <link rel="stylesheet" href="css/style.css?v=1">
+    <script src="https://cdn.firebase.com/js/client/1.1.2/firebase.js"></script>    
 </head>
 
 <body>
     <div id="wrapper">
+        <script language="JavaScript" src="javascript/first.js">
+            ref.set({ name: "Alex Wolfe" });
+
+            ref.on("value", function(data) {
+                var name = data.val() ? data.val().name : "";
+                alert("My name is " + name);
+            });
+
+        </script>
         <header>
             <h1>welcome everyone</h1>
 
