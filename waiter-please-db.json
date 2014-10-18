@@ -1,0 +1,107 @@
+{
+	"user" :
+	{
+		"mosab" : 
+		{
+ 			"flavor" :
+			{
+				"spicy" : 0,
+				"sweet" : 0,
+				"sour"	: 0,
+				"salty"	: 0,
+				"bitter": 0,
+				"fruity": 0,
+				"tart"	: 0,
+				"buttery": 0,
+				"pickled": 0,
+				"unseasoned": 0
+			},
+
+			"texture" :
+			{
+				"crunchy": 0,
+				"soft": 0,
+				"savory": 0,
+				"raw": 0,
+				"cooked": 0,
+				"juicy": 0,
+				"smoked": 0,
+				"sauteed": 0,
+				"watery": 0
+			},
+			
+			"allergy" :
+			{
+				"beef": 0,
+				"pork": 0,
+				"shellfish": 0,
+				"fish": 0,
+				"peanuts": 0,
+				"tree nuts": 0,
+				"milk": 0,
+				"soy": 0,
+				"wheat": 0
+			} 	
+		}
+	},
+
+	"restaurant" :
+	{
+		"default_rest" :
+		{
+			"property" :
+			{
+				"ethnic": "default",
+				"lat": 0,
+				"long": 0
+			},
+			
+			"menu" :
+			{
+				"default_food" :
+				{
+					"flavor" : 
+					{
+						"spicy" : 0,
+						"sweet" : 0,
+						"sour"	: 0,
+						"salty"	: 0,
+						"fruity": 0,
+						"tart"	: 0,
+						"bitter": 0,
+						"buttery": 0,
+						"pickled": 0,
+						"unseasoned": 0
+					},
+
+					"texture" : 
+					{
+						"crunchy": 0,
+						"soft": 0,
+						"savory": 0,
+						"raw": 0,
+						"cooked": 0,
+						"juicy": 0,
+						"smoked": 0,
+						"sauteed": 0,
+						"watery": 0
+					},
+
+					"allergy" :
+					{
+						"beef": 0,
+						"pork": 0,
+						"chicken": 0,
+						"shellfish": 0,
+						"fish": 0,
+						"peanuts": 0,
+						"tree nuts": 0,
+						"milk": 0,
+						"soy": 0,
+						"wheat": 0
+					}
+				}
+			}
+		}
+	}
+}
