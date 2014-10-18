@@ -1,50 +1,36 @@
-<!--hongkiat html5 tutorial-->
+<!-- test firebase -->
+
 <!doctype html>
-<head>
+<html>
+  <head>
     <meta charset="utf-8">
     <title>our first HTML5 page</title>
-    <meta name="description" content="Welcome to my basic template">
-    <link rel="stylesheet" href="css/style.css?v=1">
-    <script src="https://cdn.firebase.com/js/client/1.1.2/firebase.js"></script>    
-</head>
-
-<body>
-    <div id="wrapper">
-        <script language="JavaScript" src="javascript/first.js">
-            ref.set({ name: "Alex Wolfe" });
-
-            ref.on("value", function(data) {
-                var name = data.val() ? data.val().name : "";
-                alert("My name is " + name);
-            });
-
-        </script>
-        <header>
-            <h1>welcome everyone</h1>
-
-            <nav>
-                <u1>
-                    <li><a rel="external" href="#">Home</a></li>
-                    <li><a rel="external" href="#">About us</a></li>
-                    <li><a rel="external" href="#">Contacts</a></li>
-                </u1>
-            </nav>
-        </header>
-
-        <div id="core" class="clearfix">
-            <section id="left">
-                <p>some content here</p>
-            </section>
-
-            <section id="right">
-                <p>some more content will go here as well</p>
-            </section>
-        </div>
-
-        <footer>
-            <p>some copyright and legal notices here maybe use the ©</p>
-        </footer>
-    </div>
-</body>
+    <script src='https://cdn.firebase.com/js/client/1.1.1/firebase.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <link rel='stylesheet' type='text/css' href='/resources/tutorial/css/example.css'>
+  </head>
+  <body>
+    <div id='messagesDiv'></div>
+    <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
+    <script>
+      var myDataRef = new Firebase('https://torid-fire-430.firebaseio.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#messageInput').val('');
+        }
+      });
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+      });
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
+  </body>
 </html>
-
