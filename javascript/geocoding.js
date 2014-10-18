@@ -17,7 +17,7 @@ function codeAddress() {
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         console.log(results[0].geometry.location); //LatLng
-        LatLng = results[0].geometry.location;
+        //LatLng = results[0].geometry.location;
       } else {
         alert("Geocode was not successful for the following reason: " + status);
       }
