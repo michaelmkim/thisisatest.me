@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,19 +10,10 @@
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeIudJvIUwi40QDXG_HiIXeVVu_jIt2F8">
     </script>
-    <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: { lat: -34.397, lng: 150.644},
-          zoom: 8
-        };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+    <script type="text/javascript"
+      src="javascript/geocoding.js"></script>
   </head>
   <body>
-<div id="map-canvas"></div>
+
   </body>
 </html>
