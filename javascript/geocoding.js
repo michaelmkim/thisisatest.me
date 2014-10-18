@@ -6,6 +6,10 @@ var zip_address = prompt("enter your zip code");
 
 var geocoder = new google.maps.Geocoder();
 var LatLng;
+var mapOptions = {
+    zoom: 8,
+    center: latlng
+}
 
 function codeAddress() {
     var address = street_address+", "+city_address+", "+zip_address;
