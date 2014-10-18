@@ -7,10 +7,10 @@ var geocoder;
 
 function initialize() {
   geocoder = new google.maps.Geocoder();
-  //var latlng = new google.maps.LatLng(-34.397, 150.644);
+  var latlng = new google.maps.LatLng(-34.397, 150.644);
   var mapOptions = {
-    //zoom: 8,
-    //center: latlng
+    zoom: 8,
+    center: latlng
   }
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 }
@@ -20,7 +20,7 @@ function codeAddress() {
     console.log(address);
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
-        //console.log(results[0].geometry.location); //LatLng
+        console.log(results[0].geometry.location); //LatLng
       } else {
         alert("Geocode was not successful for the following reason: " + status);
       }
