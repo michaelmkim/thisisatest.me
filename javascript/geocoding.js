@@ -20,7 +20,7 @@ function codeAddress() {
     console.log(address);
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
-        console.log(results[0].geometry.location); //LatLng
+        //console.log(results[0].geometry.location); //LatLng
       } else {
         alert("Geocode was not successful for the following reason: " + status);
       }
