@@ -9,6 +9,7 @@ var LatLng;
 
 function codeAddress() {
     var address = street_address+", "+city_address+", "+zip_address;
+    console.log(address);
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         console.log(results[0].geometry.location); //LatLng
