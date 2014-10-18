@@ -1,5 +1,5 @@
 var data_source = new Firebase('https://torid-fire-430.firebaseio.com/');
-data_source.remove();
+//data_source.remove();
 
 var onComplete = function(error) {
 	if (error)
