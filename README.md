@@ -1,2 +1,2 @@
-mygithubpage
+page for testing purposes
 ============
