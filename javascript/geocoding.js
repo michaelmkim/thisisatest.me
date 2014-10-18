@@ -3,8 +3,7 @@
 //var city_address = prompt("enter your city");
 //var zip_address = prompt("enter your zip code");
 
-
-map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+var geocoder;
 
 function initialize() {
   geocoder = new google.maps.Geocoder();
