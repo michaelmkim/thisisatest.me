@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeIudJvIUwi40QDXG_HiIXeVVu_jIt2F8">
+    </script>
+    <script type="text/javascript"
+      src="javascript/geocoding.js">
+    </script>
+  </head>
+  <body>
+    <input type="text" id="inputTextAddress" style=" width:200px" title="Address to Geocode" />
+
+    <input type="button" onclick="codeAddress()" id="inputButtonGeocode" style="width:150px" title="Click to Geocode" value="Click to Geocode" />
+
+    <script type="text/javascript">
+
+    var geocoder;
+
+    function initialize()
+    {
+        geocoder = new google.maps.Geocoder();
+    }
+
+    function codeAddress()
+    {
+      var streetAddress = document.getElementByID("inputTextAddress").value;  
+      geocoder.geocode({'address': streetAddress}, function(results, status) {}); 
+    }
+
+    if (status == google.maps.GeocoderStatus.OK)
+    {
+        console.log(results[0].geometry.location);
+    }
+    else
+    {
+        alert("Geocode was not successful for the following reason: " + status);
+    }
+
+    </script>
+
+    </body>
+</html>
