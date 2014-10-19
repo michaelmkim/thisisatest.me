@@ -25,7 +25,7 @@
 
     function codeAddress()
     {
-      var streetAddress = document.getElementByID("inputTextAddress").value;  
+      var streetAddress = document.getElementById("inputTextAddress").value;  
       geocoder.geocode({'address': streetAddress}, function(results, status) {}); 
     }
 
